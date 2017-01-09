@@ -11,12 +11,13 @@
 /log/*
 !/log/.keep
 /tmp
+/.idea/
 
 # Ignore editor related files.
-.idea/chat-space.iml
-.idea/misc.xml
-.idea/modules.xml
-.idea/runConfigurations
-.idea/terminal.xml
-.idea/vcs.xml
-.idea/workspace.xml
+#.idea/chat-space.iml
+#.idea/misc.xml
+#.idea/modules.xml
+#.idea/runConfigurations
+#.idea/terminal.xml
+#.idea/vcs.xml
+#.idea/workspace.xml
