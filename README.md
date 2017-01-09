@@ -36,11 +36,13 @@ also is a part of <span style="color:#ca493c">TECH::CAMP _EXPERT_</span> curricu
 
 ####Groups
 
+* has many **Users**
+
 * has many **Messages**
 
 |columns     |types   |
 |:----------:|:------:|
-|group_name* |integer |
+|group_name* |string  |
 
 ####Messages
 
