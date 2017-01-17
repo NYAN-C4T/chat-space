@@ -57,4 +57,15 @@ also is a part of <span style="color:#ca493c">TECH::CAMP _EXPERT_</span> curricu
 |group_id* |integer |
 |user_id*  |integer |
 
+####Group_users
+
+* belong to **User**
+
+* belong to **Group**
+
+|columns   |types   |
+|:--------:|:------:|
+|group_id* |integer |
+|user_id*  |integer |
+
 ( * = not null, _Italics_ are indexed)
