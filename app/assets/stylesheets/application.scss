@@ -1,2 +1,16 @@
-@import "./reset";
+//misc
+@import "misc/_variable.scss";
+@import "misc/_mixin.scss";
+@import "misc/_function.scss";
+@import "misc/_clearfix.scss";
 
+//tool
+@import "font-awesome";
+
+//base
+@import "base/_reset.scss";
+@import "base/_base.scss";
+
+//block
+@import "block/_main.scss";
+@import "block/_side.scss";

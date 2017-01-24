@@ -1,0 +1,3 @@
+@function getRestOf($pixel) {
+  @return calc(100% - #{$pixel}px);
+}

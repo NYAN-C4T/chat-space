@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %strong Body:
+  = @message.body
+%p
+  %strong Image:
+  = @message.image
+%p
+  %strong Group:
+  = @message.group_id
+%p
+  %strong User:
+  = @message.user_id
+= link_to 'Edit', edit_message_path(@message)
+|
+\#{link_to 'Back', messages_path}
