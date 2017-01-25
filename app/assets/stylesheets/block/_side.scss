@@ -1,0 +1,47 @@
+.side {
+  height: 100%;
+  min-width: 300px;
+  color: #ffffff;
+  background-color: #2f3e51;
+  &-header {
+    height: 100px;
+    padding: 0 20px;
+    line-height: 100px;
+    background-color: #253141;
+    p {
+      font: {
+        size: 16px;
+        weight: bold;
+      }
+      letter-spacing: 2px;
+      float: left;
+    }
+    &__icons {
+      height: 100px;
+      width: auto;
+      display: inline-block;
+      float: right;
+      i {
+        margin-left: 5px;
+        font-size: 20px;
+      }
+    }
+    &-groups {
+      height: getRestOf(100);
+    }
+  }
+}
+
+.side-group {
+  padding: 20px;
+  &__name {
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+  &__chat {
+    font-size: 11px;
+  }
+  &:hover {
+    background-color: #384a62;
+  }
+}

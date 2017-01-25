@@ -1,0 +1,98 @@
+.main {
+@include cover-all;
+  //main-header
+  &-header {
+    height: 100px;
+    width: auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eeeeee;
+    &__name {
+      padding-top: 30px;
+      letter-spacing: 2px;
+      font-size: 20px;
+      color: #333333;
+    }
+    &__members {
+      margin-top: 10px;
+      font-size: 12px;
+      color: $l-gray;
+      float: left;
+    }
+    &__button--edit {
+      @include btn-form(10px 20px, $l-blue, #ffffff, 2px, $l-blue);
+      margin-top: -35px;
+      font-size: 14px;
+      float: right;
+    }
+  }
+
+  //main-body
+  &-body {
+    height: getRestOf(190);
+    width: auto;
+    padding: 0 40px;
+    background-color: #fafafa;
+    .main-posts {
+      padding-top: 6px;
+    }
+  }
+
+  .main-post {
+    padding-top: 40px;
+    color: $d-gray;
+    &__header {
+      display: inline-block;
+      &.main-post__name {
+        font: {
+          size: 16px;
+          weight: bold;
+        }
+      }
+      &.main-post__time {
+        margin-left: 5px;
+        font-size: 12px;
+        color: $l-gray;
+      }
+    }
+    &__body {
+      &.main-post__text {
+        margin-top: 5px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  //main-footer
+  &-footer {
+    height: 90px;
+    width: auto;
+    padding: 0 40px;
+    background-color: #dddddd;
+    @include flex-row;
+    align-items: baseline;
+    justify-content: space-between;
+    &__form-chat {
+      width: 100%;
+      padding: 20px 0;
+      .main-footer__input {
+        height: 50px;
+        width: getRestOf(10);
+        min-width: 180px;
+        padding-left: 10px;
+        border: none;
+      }
+    }
+    .main-footer__icon {
+      margin-left: -40px;
+      width: auto;
+      i {
+        font-size: 20px;
+      }
+    }
+    &__button--send {
+      @include btn-form(10px 22px, #ffffff, $l-blue, 2px, $l-blue);
+      margin-left: 30px;
+    }
+  }
+}

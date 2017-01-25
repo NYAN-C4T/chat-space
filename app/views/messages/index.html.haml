@@ -1,0 +1,41 @@
+.side
+  .side-header
+    .side-header__name
+      %p alex
+    .side-header__icons
+      %i.fa.fa-pencil-square-o
+      %i.fa.fa-cog
+  .side-groups
+    %ul
+      %li.side-group
+        %p.side-group__name test_group_1
+        %p.side-group__chat foo
+      %li.side-group
+        %p.side-group__name test_group_2
+        %p.side-group__chat bar
+.main
+  .main-header.clearfix
+    %h1.main-header__name test_group_1
+    %p.main-header__members Members : alex
+    %a.main-header__button--edit{href: "#"} Edit
+  .main-body
+    %ul.main-posts
+      %li.main-post
+        .main-post__header
+          %p.main-post__header.main-post__name alex
+          %p.main-post__header.main-post__time 2017/01/07 12:34:56
+        .main-post__body
+          %p.main-post__body.main-post__text yay!
+      %li.main-post
+        .main-post__header
+          %p.main-post__header.main-post__name alex
+          %p.main-post__header.main-post__time 2017/01/17 12:34:56
+        .main-post__body
+          %p.main-post__body.main-post__text a cold day in hell
+  .main-footer.clearfix
+    %form.main-footer__form-chat
+      %input.main-footer__input{row: "1", placeholder: "type a message"}
+    .main-footer__icon
+      %i.fa.fa-image
+    %a.main-footer__button--send{href: "#"} Send
+        

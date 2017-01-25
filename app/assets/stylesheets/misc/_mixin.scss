@@ -1,0 +1,17 @@
+@mixin cover-all {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin btn-form ($pad, $txt-color, $bg-color, $bdr-px, $bdr-color) {
+  padding: $pad;
+  color: $txt-color;
+  background-color: $bg-color;
+  border: $bdr-px solid $bdr-color;
+  text-decoration: none;
+}
