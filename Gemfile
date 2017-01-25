@@ -41,6 +41,10 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  # pry
+  gem 'pry-rails'
+  # erb2haml
+  gem 'erb2haml'
 end
 
 group :development do
@@ -63,15 +67,9 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# pry
-gem 'pry-rails'
 # devise
 gem 'devise'
-# erb2haml
-gem 'erb2haml'
 # font-awesome-rails
 gem 'font-awesome-rails'
 # haml-rails
 gem 'haml-rails'
-# rails assets vue
-gem 'rails-assets-vue'
