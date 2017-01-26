@@ -2,7 +2,10 @@ html {
   @include cover-all;
   body{
     @include cover-all;
-    @include flex-row;
     font-family: "Hiragino Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    .wrapper {
+      @include cover-all;
+      @include flex-row;
+    }
   }
 }

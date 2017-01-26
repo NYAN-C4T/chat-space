@@ -1,0 +1,12 @@
+body {
+  p {
+    &.notice {
+      @include flash-msg;
+      background-color: $l-blue;
+    }
+    &.alert {
+      @include flash-msg;
+      background-color: #d65f4c;
+    }
+  }
+}
