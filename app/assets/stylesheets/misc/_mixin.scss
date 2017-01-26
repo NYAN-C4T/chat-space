@@ -8,6 +8,11 @@
   flex-direction: row;
 }
 
+@mixin flash-msg {
+  text-align: center;
+  color: #ffffff;
+}
+
 @mixin btn-form ($pad, $txt-color, $bg-color, $bdr-px, $bdr-color) {
   padding: $pad;
   color: $txt-color;
