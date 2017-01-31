@@ -1,0 +1,2 @@
+= f.fields_for :group_users do |user_form|
+  = user_form.collection_check_boxes(:user_id, User.all, :id, :name)
