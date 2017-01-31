@@ -23,7 +23,7 @@ class GroupsController < ApplicationController
     if Group.find(params[:id]).update(create_params)
       redirect_to groups_path, notice: 'グループを編集しました。'
     else
-      render edit_group_path
+      redirect_to edit_group_path, alert: 'グループ名を入力してください。'
     end
   end
 
