@@ -20,10 +20,11 @@ class GroupsController < ApplicationController
   end
 
   def update
-    if Group.find(params[:id]).update(create_params)
+    @group = Group.find(params[:id])
+    if @group.update(create_params)
       redirect_to groups_path, notice: 'グループを編集しました。'
     else
-      redirect_to edit_group_path, alert: 'グループ名を入力してください。'
+      render "groups/edit"
     end
   end
 
