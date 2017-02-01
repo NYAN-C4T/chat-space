@@ -24,7 +24,7 @@ class GroupsController < ApplicationController
     if @group.update(create_params)
       redirect_to groups_path, notice: 'グループを編集しました。'
     else
-      render "groups/edit"
+      render :edit
     end
   end
 
