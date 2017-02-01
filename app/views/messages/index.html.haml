@@ -20,18 +20,22 @@
     %a.main-header__button--edit{href: "#"} Edit
   .main-body
     %ul.main-posts
+    - @messages.each do |msg|
       %li.main-post
         .main-post__header
-          %p.main-post__header.main-post__name alex
-          %p.main-post__header.main-post__time 2017/01/07 12:34:56
+          %p.main-post__header.main-post__name
+            = msg.user.name
+          %p.main-post__header.main-post__time
+            = msg.created_at
         .main-post__body
-          %p.main-post__body.main-post__text yay!
-      %li.main-post
-        .main-post__header
-          %p.main-post__header.main-post__name alex
-          %p.main-post__header.main-post__time 2017/01/17 12:34:56
-        .main-post__body
-          %p.main-post__body.main-post__text a cold day in hell
+          %p.main-post__body.main-post__text
+            = msg.body
+      -#%li.main-post
+      -#  .main-post__header
+      -#    %p.main-post__header.main-post__name alex
+      -#    %p.main-post__header.main-post__time 2017/01/17 12:34:56
+      -#  .main-post__body
+      -#    %p.main-post__body.main-post__text a cold day in hell
   .main-footer.clearfix
     %form.main-footer__form-chat
       %input.main-footer__input{row: "1", placeholder: "type a message"}
