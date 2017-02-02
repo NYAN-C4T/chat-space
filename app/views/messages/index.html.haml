@@ -20,16 +20,16 @@
     %a.main-header__button--edit{href: "#"} Edit
   .main-body
     %ul.main-posts
-    - @messages.each do |msg|
-      %li.main-post
-        .main-post__header
-          %p.main-post__header.main-post__name
-            = msg.user.name
-          %p.main-post__header.main-post__time
-            = msg.created_at
-        .main-post__body
-          %p.main-post__body.main-post__text
-            = msg.body
+      - @messages.each do |msg|
+        %li.main-post
+          .main-post__header
+            %p.main-post__header.main-post__name
+              = msg.user.name
+            %p.main-post__header.main-post__time
+              = msg.created_at
+          .main-post__body
+            %p.main-post__body.main-post__text
+              = msg.body
       -#%li.main-post
       -#  .main-post__header
       -#    %p.main-post__header.main-post__name alex

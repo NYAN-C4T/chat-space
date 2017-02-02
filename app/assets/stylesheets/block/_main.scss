@@ -34,10 +34,10 @@
     padding: 0 40px;
     background-color: #fafafa;
     .main-posts {
-      padding-top: 6px;
+      height: 100%;
+      overflow: scroll;
     }
   }
-
   .main-post {
     list-style: none;
     padding-top: 40px;
@@ -64,6 +64,7 @@
     }
   }
 
+
   //main-footer
   &-footer {
     height: 90px;
@@ -71,6 +72,7 @@
     padding: 0 40px;
     background-color: #dddddd;
     &__form-chat {
+      height: getRestOf(40);
       width: 100%;
       padding: 20px 0;
       .main-footer__input {
@@ -88,11 +90,9 @@
       float: right;
     }
     .main-footer__icon {
-      position: relative;
-      top: -35px;
-      right: 35px;
-      //margin-top: -50px;
-      //margin-right: -10px;
+      position: absolute;
+      bottom: 32px;
+      right: 155px;
       width: auto;
       i {
         font-size: 20px;
