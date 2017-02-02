@@ -70,30 +70,33 @@
     width: auto;
     padding: 0 40px;
     background-color: #dddddd;
-    @include flex-row;
-    align-items: baseline;
-    justify-content: space-between;
     &__form-chat {
       width: 100%;
       padding: 20px 0;
       .main-footer__input {
         height: 50px;
-        width: getRestOf(10);
+        width: getRestOf(110);
         min-width: 180px;
         padding-left: 10px;
         border: none;
-      }
-    }
-    .main-footer__icon {
-      margin-left: -40px;
-      width: auto;
-      i {
-        font-size: 20px;
+        float: left;
       }
     }
     &__button--send {
       @include btn-form(10px 22px, #ffffff, $l-blue, 2px, $l-blue);
-      margin-left: 30px;
+      //margin-left: 30px;
+      float: right;
+    }
+    .main-footer__icon {
+      position: relative;
+      top: -35px;
+      right: 35px;
+      //margin-top: -50px;
+      //margin-right: -10px;
+      width: auto;
+      i {
+        font-size: 20px;
+      }
     }
   }
 }
