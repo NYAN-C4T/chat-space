@@ -1,6 +1,7 @@
 ja:
   attributes:
     group_name: "グループ名"
+    body: "メッセージ"
   devise:
     confirmations:
       confirmed: "アカウントが確認されました。ログインしています。"

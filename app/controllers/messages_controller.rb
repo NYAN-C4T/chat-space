@@ -6,10 +6,13 @@ class MessagesController < ApplicationController
 
   def create
     @messages = Message.all
-    msg = params[:message].permit(:body)
-    prm = msg.merge(create_params)
-    Message.create(prm)
-    redirect_to group_messages_path
+    prm = params[:message].permit(:body).merge(create_params)
+    create_msg = Message.create(prm)
+    if create_msg.valid?
+      redirect_to group_messages_path
+    else
+      redirect_to group_messages_path, alert: create_msg.errors.full_messages[0]
+    end
   end
 
   private
