@@ -86,7 +86,6 @@
     }
     &__button--send {
       @include btn-form(10px 22px, #ffffff, $l-blue, 2px, $l-blue);
-      //margin-left: 30px;
       float: right;
     }
     .main-footer__icon {
