@@ -1,22 +1,27 @@
 class MessagesController < ApplicationController
+  before_action :get_group_messages, only:[:index, :create]
+
   def index
-    @messages = Message.all
-    @message = Message.new
   end
 
   def create
-    @messages = Message.all
-    prm = params[:message].permit(:body).merge(create_params)
-    create_msg = Message.create(prm)
-    if create_msg.valid?
+    prm = params[:message].permit(:body).merge(message_params)
+    msg = Message.create(prm)
+    if msg.valid?
       redirect_to group_messages_path
     else
-      redirect_to group_messages_path, alert: create_msg.errors.full_messages[0]
+      flash.now[:alert] = msg.errors.full_messages[0]
+      render :index
     end
   end
 
   private
-  def create_params
+  def message_params
     params.permit(:group_id).merge(user_id: current_user.id)
+  end
+
+  def get_group_messages
+    @message = Message.new
+    @messages = Message.includes(:user).where(group_id: 1)
   end
 end
