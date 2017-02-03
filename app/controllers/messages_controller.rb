@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
   end
 
 def create
-  msg = Message.create(body: message_params[:body], group_id: params[:group_id], user_id: current_user.id)
+  msg = Message.create(message_params)
   if msg.persisted?
     redirect_to group_messages_path
   else
@@ -16,7 +16,7 @@ end
 
   private
   def message_params
-    params.require(:message).permit(:body)
+    params.require(:message).permit(:body).merge(group_id: params[:group_id], user_id: current_user.id)
   end
 
   def get_group_messages
