@@ -19,23 +19,7 @@
     %p.main-header__members Members : alex
     %a.main-header__button--edit{href: "#"} Edit
   .main-body
-    %ul.main-posts
-      - @messages.each do |msg|
-        %li.main-post
-          .main-post__header
-            %p.main-post__header.main-post__name
-              = msg.user.name
-            %p.main-post__header.main-post__time
-              = msg.created_at.strftime("%Y/%m/%d %X")
-          .main-post__body
-            %p.main-post__body.main-post__text
-              = msg.body
-      -#%li.main-post
-      -#  .main-post__header
-      -#    %p.main-post__header.main-post__name alex
-      -#    %p.main-post__header.main-post__time 2017/01/17 12:34:56
-      -#  .main-post__body
-      -#    %p.main-post__body.main-post__text a cold day in hell
+    = render "main-body"
   .main-footer.clearfix
     .main-footer__form-chat
       = form_for @message, url: {action: :create} do |f|
