@@ -3,7 +3,7 @@ class Message < ApplicationRecord
   belongs_to :group
   validates :body, presence: true
 
-  def self.dt_format(dt)
-    dt.strftime("%Y/%m/%d %X")
+  def dt_format
+    created_at.strftime("%Y/%m/%d %X")
   end
 end

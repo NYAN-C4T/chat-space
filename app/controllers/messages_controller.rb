@@ -2,17 +2,18 @@ class MessagesController < ApplicationController
   before_action :get_group_messages, only: %i(index create)
 
   def index
+    @message = Message.new
   end
 
-def create
-  msg = Message.create(message_params)
-  if msg.persisted?
-    redirect_to group_messages_path
-  else
-    flash.now[:alert] = msg.errors.full_messages[0]
-    render :index
+  def create
+    @message = Message.create(message_params)
+    if @message.persisted?
+      redirect_to group_messages_path(@message.group_id)
+    else
+      flash.now[:alert] = @message.errors.full_messages[0]
+      render :index
+    end
   end
-end
 
   private
   def message_params
@@ -20,8 +21,8 @@ end
   end
 
   def get_group_messages
-    @message = Message.new
-    @messages = Message.includes(:user).where(group_id: params[:group_id])
+    @group = Group.find(params[:group_id])
+    @messages = @group.messages
   end
 end
 

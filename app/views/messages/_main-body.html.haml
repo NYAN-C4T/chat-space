@@ -5,7 +5,7 @@
         %p.main-post__header.main-post__name
           = msg.user.name
         %p.main-post__header.main-post__time
-          = Message.dt_format(msg.created_at)
+          = msg.dt_format
       .main-post__body
         %p.main-post__body.main-post__text
           = msg.body
