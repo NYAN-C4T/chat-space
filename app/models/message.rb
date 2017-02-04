@@ -4,6 +4,6 @@ class Message < ApplicationRecord
   validates :body, presence: true
 
   def dt_format
-    created_at.strftime("%Y/%m/%d %X")
+    created_at.strftime("%Y/%m/%d %H:%M:%S")
   end
 end

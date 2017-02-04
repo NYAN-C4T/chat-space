@@ -21,8 +21,7 @@ class MessagesController < ApplicationController
   end
 
   def get_group_messages
-    @group = Group.find(params[:group_id])
-    @messages = @group.messages
+    @messages = Message.where(params[:group_id])
   end
 end
 
