@@ -30,9 +30,9 @@ also is a part of <span style="color:#ca493c">TECH::CAMP _EXPERT_</span> curricu
 
 |columns     |types   |
 |:----------:|:------:|
-|_name*_     |string  |
+|name        |string  |
 |email       |string  |
-|password*   |string  |
+|password    |string  |
 
 ####Groups
 
@@ -42,7 +42,7 @@ also is a part of <span style="color:#ca493c">TECH::CAMP _EXPERT_</span> curricu
 
 |columns     |types   |
 |:----------:|:------:|
-|group_name* |string  |
+|group_name**|string  |
 
 ####Messages
 
@@ -52,7 +52,7 @@ also is a part of <span style="color:#ca493c">TECH::CAMP _EXPERT_</span> curricu
 
 |columns   |types   |
 |:--------:|:------:|
-|body*     |text    |
+|body**    |text    |
 |image     |string  |
 |group_id* |integer |
 |user_id*  |integer |
@@ -68,4 +68,4 @@ also is a part of <span style="color:#ca493c">TECH::CAMP _EXPERT_</span> curricu
 |group_id* |integer |
 |user_id*  |integer |
 
-( * = not null, _Italics_ are indexed)
+( * = foreign-keys, ** = validated at model )
