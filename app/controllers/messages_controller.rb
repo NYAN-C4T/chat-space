@@ -6,8 +6,8 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.create(message_params)
-    if @message.persisted?
+    @message = @messages.build(message_params)
+    if @message.save
       redirect_to group_messages_path(@message.group_id)
     else
       flash.now[:alert] = @message.errors.full_messages[0]
@@ -17,7 +17,7 @@ class MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit(:body).merge(group_id: params[:group_id], user_id: current_user.id)
+    params.require(:message).permit(:body).merge(user_id: current_user.id)
   end
 
   def get_group_messages

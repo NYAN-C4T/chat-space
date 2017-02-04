@@ -1,5 +1,5 @@
 %ul.main-posts
-  - @messages.each do |msg|
+  - @messages.includes(:user).each do |msg|
     %li.main-post
       .main-post__header
         %p.main-post__header.main-post__name
