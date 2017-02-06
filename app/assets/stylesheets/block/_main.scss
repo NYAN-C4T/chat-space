@@ -34,11 +34,12 @@
     padding: 0 40px;
     background-color: #fafafa;
     .main-posts {
-      padding-top: 6px;
+      height: 100%;
+      overflow: scroll;
     }
   }
-
   .main-post {
+    list-style: none;
     padding-top: 40px;
     color: $d-gray;
     &__header {
@@ -63,36 +64,39 @@
     }
   }
 
+
   //main-footer
   &-footer {
     height: 90px;
     width: auto;
     padding: 0 40px;
     background-color: #dddddd;
-    @include flex-row;
-    align-items: baseline;
-    justify-content: space-between;
+    position: relative;
     &__form-chat {
+      height: getRestOf(40);
       width: 100%;
       padding: 20px 0;
       .main-footer__input {
         height: 50px;
-        width: getRestOf(10);
+        width: getRestOf(110);
         min-width: 180px;
         padding-left: 10px;
         border: none;
-      }
-    }
-    .main-footer__icon {
-      margin-left: -40px;
-      width: auto;
-      i {
-        font-size: 20px;
+        float: left;
       }
     }
     &__button--send {
       @include btn-form(10px 22px, #ffffff, $l-blue, 2px, $l-blue);
-      margin-left: 30px;
+      float: right;
+    }
+    .main-footer__icon {
+      position: absolute;
+      bottom: 32px;
+      right: 155px;
+      width: auto;
+      i {
+        font-size: 20px;
+      }
     }
   }
 }
