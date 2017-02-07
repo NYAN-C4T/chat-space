@@ -6,13 +6,7 @@
       %i.fa.fa-pencil-square-o
       %i.fa.fa-cog
   .side-groups
-    %ul
-      %li.side-group
-        %p.side-group__name test_group_1
-        %p.side-group__chat foo
-      %li.side-group
-        %p.side-group__name test_group_2
-        %p.side-group__chat bar
+    = render "side-groups"
 .main
   - if params[:group_id] != nil
     .main-header.clearfix
