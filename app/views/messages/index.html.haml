@@ -14,16 +14,10 @@
         %p.side-group__name test_group_2
         %p.side-group__chat bar
 .main
-  .main-header.clearfix
-    %h1.main-header__name test_group_1
-    %p.main-header__members Members : alex
-    %a.main-header__button--edit{href: "#"} Edit
-  .main-body
-    = render "main-body"
-  .main-footer.clearfix
-    .main-footer__form-chat
-      = form_for [:group, @message] do |f|
-        = f.text_field :body, placeholder: "type a message", class: "main-footer__input"
-        = f.submit "Send", class: "main-footer__button--send"
-    .main-footer__icon
-      %i.fa.fa-image
+  - if params[:group_id] != nil
+    .main-header.clearfix
+      = render "main-header"
+    .main-body
+      = render "main-body"
+    .main-footer.clearfix
+      = render "main-footer"

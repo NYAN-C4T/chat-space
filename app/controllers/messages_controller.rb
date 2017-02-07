@@ -21,7 +21,7 @@ class MessagesController < ApplicationController
   end
 
   def get_messages
+    @groups = Group.all
     @messages = Message.where(group_id: params[:group_id])
   end
 end
-

@@ -1,0 +1,4 @@
+%h1.main-header__name #{Group.find(params[:group_id]).group_name}
+%p.main-header__members Members : alex
+= link_to 'Edit', edit_group_path(params[:group_id]), class: "main-header__button--edit"
+-#%a.main-header__button--edit{href: "#"} Edit
