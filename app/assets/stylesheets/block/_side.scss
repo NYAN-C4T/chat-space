@@ -8,12 +8,14 @@
     padding: 0 20px;
     line-height: 100px;
     background-color: #253141;
-    p {
+    a {
       font: {
         size: 16px;
         weight: bold;
       }
       letter-spacing: 2px;
+      color: #ffffff;
+      text-decoration: none;
       float: left;
     }
     &__icons {
@@ -37,6 +39,8 @@
   &__name {
     margin-bottom: 5px;
     font-size: 15px;
+    text-decoration: none;
+    color: #ffffff
   }
   &__chat {
     font-size: 11px;
