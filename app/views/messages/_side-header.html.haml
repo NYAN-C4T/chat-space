@@ -1,0 +1,6 @@
+.side-header__name
+  = link_to "#{current_user.name}", edit_user_registration_path(current_user.id)
+  -#%p alex
+  .side-header__icons
+    %i.fa.fa-pencil-square-o
+    %i.fa.fa-cog
