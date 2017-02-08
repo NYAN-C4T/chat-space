@@ -29,9 +29,9 @@
 
   //main-body
   &-body {
-    height: getRestOf(190);
+    height: getRestOf(230);
     width: auto;
-    padding: 0 40px;
+    padding: 40px 40px 0;
     background-color: #fafafa;
     .main-posts {
       height: 100%;
@@ -40,7 +40,7 @@
   }
   .main-post {
     list-style: none;
-    padding-top: 40px;
+    padding-bottom: 40px;
     color: $d-gray;
     &__header {
       display: inline-block;
