@@ -3,6 +3,7 @@
   min-width: 300px;
   color: #ffffff;
   background-color: #2f3e51;
+  overflow: scroll;
   &-header {
     height: 100px;
     padding: 0 20px;
@@ -33,19 +34,19 @@
     }
   }
 }
+  .side-group {
+    padding: 20px;
+    &__name {
+      margin-bottom: 5px;
+      font-size: 15px;
+      text-decoration: none;
+      color: #ffffff
+    }
+    &__chat {
+      font-size: 11px;
+    }
+    &:hover {
+      background-color: #384a62;
+    }
+  }
 
-.side-group {
-  padding: 20px;
-  &__name {
-    margin-bottom: 5px;
-    font-size: 15px;
-    text-decoration: none;
-    color: #ffffff
-  }
-  &__chat {
-    font-size: 11px;
-  }
-  &:hover {
-    background-color: #384a62;
-  }
-}
