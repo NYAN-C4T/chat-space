@@ -12,8 +12,10 @@
 !/log/.keep
 /tmp
 
+/.idea/*
+
 # User-specific stuff:
-.idea/workspace.xml
+# .idea/workspace.xml
 .idea/tasks.xml
 
 # Sensitive or high-churn files:
@@ -29,3 +31,7 @@
 .idea/gradle.xml
 .idea/libraries
 
+app/assets/config/
+app/channels/
+app/jobs/
+app/mailers/
