@@ -1,12 +1,12 @@
 FactoryGirl.define do
 
   factory :message do
-    body       "bar"
-    image      "baz"
+    body       { Faker::Lorem.word }
+    image      { Faker::Internet.url }
     user_id    1
     group_id   1
-    created_at "2017-02-07 12:51:11"
-    updated_at "2017-02-07 12:51:11"
+    created_at { Faker::Time.between(2.days.ago, Time.now, :all)}
+    updated_at { Faker::Time.between(2.days.ago, Time.now, :all)}
   end
 
 end
