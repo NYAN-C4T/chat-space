@@ -9,7 +9,6 @@ describe Message do
     end
     it 'invalid w/o user_id' do
       message = build(:message, user_id: '')
-      binding.pry
       message.valid?
       expect(message.errors[:user]).to include("が不正な値です。")
     end
