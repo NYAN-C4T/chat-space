@@ -70,5 +70,7 @@ ja:
         message:
           attributes:
             user:
-              required: "error"
+              required: "が不正な値です。"
+            group:
+              required: "が不正な値です。"
 
