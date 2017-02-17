@@ -39,5 +39,3 @@ class MessagesController < ApplicationController
   end
 end
 
-
-# Object {id: 49, body: "asdf", image: null, user_id: 2, group_id: 1…}
